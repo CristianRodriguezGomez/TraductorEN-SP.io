@@ -73,9 +73,15 @@
             margin-top: 20px;
             text-align: center;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #translationResult span {
+            flex: 1;
         }
     </style>
-
 </head>
 <body>
     <div class="container">
@@ -83,11 +89,17 @@
         <form id="translationForm">
             <textarea id="inputText" rows="4" placeholder="Ingresa el texto a traducir"></textarea>
             <br>
+            <label for="languageSelect">Selecciona el idioma:</label>
+            <select id="languageSelect">
+                <option value="es-en">Español a Inglés</option>
+                <option value="en-es">Inglés a Español</option>
+            </select>
+            <br>
             <button type="submit">Traducir</button>
         </form>
 
         <div id="translationResult">
-            <!-- Resultado de la traducción se mostrará aquí -->
+            <span id="translatedText"></span>
         </div>
     </div>
 
